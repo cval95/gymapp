@@ -1,4 +1,4 @@
-const Routine = require('../models/workoutModel')
+const Routine = require('../models/routineModel')
 const mongoose = require('mongoose')
 
 //get all workouts
@@ -22,7 +22,7 @@ const getRoutine = async (req, res) => {
   
     const routine = await Routine.findById(id)
   
-    if (!workout) {
+    if (!routine) {
       return res.status(404).json({error: 'No such routine'})
     }
   
@@ -70,7 +70,7 @@ const deleteRoutine = async (req, res) => {
     const routine = await Routine.findOneAndDelete({_id: id})
   
     if(!routine) {
-      return res.status(400).json({error: 'No such workout'})
+      return res.status(400).json({error: 'No such routine'})
     }
   
     res.status(200).json(routine)
