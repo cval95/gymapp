@@ -1,6 +1,5 @@
-
-
 const express = require('express')
+
 const {
   getRoutines, 
   getRoutine, 
@@ -8,7 +7,7 @@ const {
   deleteRoutine, 
   updateRoutine
  
-} = require('../controllers/RoutineController')
+} = require('../controllers/routineController')
 
 const router = express.Router()
 
