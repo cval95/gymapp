@@ -102,7 +102,7 @@ const updateRoutine = async (req, res) => {
 
 
 module.exports = {
-    getRoutine,
+    getRoutines,
     getRoutine,
     createRoutine,
     deleteRoutine,
