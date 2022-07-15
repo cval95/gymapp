@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // pages & components
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
+import RoutineForm from './components/RoutineForm';
 
 function App() {
 
@@ -15,6 +16,10 @@ function App() {
             <Route 
               path="/" 
               element={<Home />} 
+            />
+             <Route 
+              path="/routines" 
+              element={<RoutineForm />} 
             />
           </Routes>
         </div>
