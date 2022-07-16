@@ -58,7 +58,7 @@ const handleSubmit = async (e) => {
 
     <label>Workout </label>
     <input 
-      type="number" 
+      type="text" 
       onChange={(e) => setWorkout(e.target.value)} 
       value={workout}
       className={emptyFields.includes('workout') ? 'error' : ''}
@@ -66,7 +66,7 @@ const handleSubmit = async (e) => {
 
     <label>Exercise</label>
     <input 
-      type="number" 
+      type="text" 
       onChange={(e) => setExercise(e.target.value)} 
       value={exercise}
       className={emptyFields.includes('exercise') ? 'error' : ''}
