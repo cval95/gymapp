@@ -33,18 +33,12 @@ const getRoutine = async (req, res) => {
 
 // create a new workout
 const createRoutine = async (req, res) => {
-  const {title, load, reps} = req.body
+  const {name} = req.body
 
   let emptyFields = []
 
-  if (!title) {
-    emptyFields.push('title')
-  }
-  if (!load) {
-    emptyFields.push('load')
-  }
-  if (!reps) {
-    emptyFields.push('reps')
+  if (!name) {
+    emptyFields.push('name')
   }
   if (emptyFields.length > 0) {
     return res.status(400).json({ error: 'Please fill in all fields', emptyFields })
@@ -52,7 +46,7 @@ const createRoutine = async (req, res) => {
 
   // add to the database
   try {
-    const routine = await Routine.create({ title, load, reps })
+    const routine = await Routine.create({ name })
     res.status(200).json(routine)
   } catch (error) {
     res.status(400).json({ error: error.message })

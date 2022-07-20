@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // pages & components
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
-import RoutineForm from './components/RoutineForm';
+import Routines from './pages/Routines'
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
             />
              <Route 
               path="/routines" 
-              element={<RoutineForm />} 
+              element={<Routines />} 
             />
           </Routes>
         </div>

@@ -5,15 +5,13 @@ const RoutineForm = () => {
 const {dispatch} = useRoutinesContext
 
 const [name, setName] = useState('')
-const [workout, setWorkout] = useState('')
-const [exercise, setExercise] = useState('')
 const [error, setError] = useState(null)
 const [emptyFields, setEmptyFields] = useState([])
 
 const handleSubmit = async (e) => {
   e.preventDefault()
 
-  const routine = {name, workout, exercise}
+  const routine = {name}
   
   const response = await fetch('/api/routines', {
     method: 'POST',
@@ -32,8 +30,6 @@ const handleSubmit = async (e) => {
     setEmptyFields([])
     setError(null)
     setName('')
-    setWorkout('')
-    setExercise('')
     dispatch({type: 'CREATE_ROUTINE', payload: json})
   }
 
@@ -56,23 +52,9 @@ const handleSubmit = async (e) => {
       className={emptyFields.includes('name') ? 'error' : ''}
     />
 
-    <label>Workout </label>
-    <input 
-      type="text" 
-      onChange={(e) => setWorkout(e.target.value)} 
-      value={workout}
-      className={emptyFields.includes('workout') ? 'error' : ''}
-    />
+    
 
-    <label>Exercise</label>
-    <input 
-      type="text" 
-      onChange={(e) => setExercise(e.target.value)} 
-      value={exercise}
-      className={emptyFields.includes('exercise') ? 'error' : ''}
-    />
-
-    <button>Add Routine</button>
+    <button>Create Routine</button>
     {error && <div className="error">{error}</div>}
   </form>
   )
