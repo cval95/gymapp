@@ -1,7 +1,7 @@
 const Routine = require('../models/routineModel')
 const mongoose = require('mongoose')
 
-//get all workouts
+//get all routines
 const getRoutines = async(req, res) =>{
     const routines = await Routine.find({}).sort({createdAt: -1})
 
@@ -12,7 +12,7 @@ const getRoutines = async(req, res) =>{
 
 
 
-//get a single workout 
+//get a single routine 
 const getRoutine = async (req, res) => {
     const { id } = req.params
   
@@ -31,7 +31,7 @@ const getRoutine = async (req, res) => {
   
 
 
-// create a new workout
+// create a new routine
 const createRoutine = async (req, res) => {
   const {name} = req.body
 
