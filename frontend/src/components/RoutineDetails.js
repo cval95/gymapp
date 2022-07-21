@@ -23,8 +23,12 @@ const RoutineDetails = (routine) => {
   return (
     <div className="workout-details">
     <h4>{routine.name}</h4>
+    
     <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
+    
   </div>
+
+
   )
 }
 

@@ -41,6 +41,10 @@ const handleSubmit = async (e) => {
 
 
   return (
+
+  
+
+
     <form className="create" onSubmit={handleSubmit}> 
     <h3>Create Routine</h3>
 
@@ -52,7 +56,7 @@ const handleSubmit = async (e) => {
       className={emptyFields.includes('name') ? 'error' : ''}
     />
 
-    
+
 
     <button>Create Routine</button>
     {error && <div className="error">{error}</div>}
