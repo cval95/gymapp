@@ -18,7 +18,7 @@ const Home = () => {
       }
     }
 
-    fetchWorkouts()
+    fetchWorkouts() 
   }, [dispatch])
 
   return (
