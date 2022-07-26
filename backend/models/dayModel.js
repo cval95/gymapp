@@ -2,17 +2,26 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const routineSchema = new Schema({
+const daySchema = new Schema({
     name: {
         type: String,
         required: true
     },
-    workouts: [
+    exercises: [
         {
      name: {
         type: String,
         required: true
     },
+    sets: {
+        type: String,
+        required: true
+    },
+    reps: {
+        type: String,
+        required: true
+    },
+
     }
 ]
     
@@ -25,4 +34,3 @@ const routineSchema = new Schema({
 
 
 module.exports = mongoose.model('Routine', routineSchema)
-
