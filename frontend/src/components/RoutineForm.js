@@ -2,7 +2,7 @@ import {useState} from 'react'
 import { useRoutinesContext } from '../hooks/useRoutinesContext'
 
 const RoutineForm = () => {
-const {dispatch} = useRoutinesContext
+const {dispatch} = useRoutinesContext()
 
 const [name, setName] = useState('')
 const [error, setError] = useState(null)

@@ -1,6 +1,6 @@
 import {useRoutinesContext} from '../hooks/useRoutinesContext'
 
-const RoutineDetails = (routine) => {
+const RoutineDetails = ({routine}) => {
 
   const { dispatch } = useRoutinesContext()
 

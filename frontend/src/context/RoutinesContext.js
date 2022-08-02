@@ -14,7 +14,7 @@ export const routinesReducer = (state, action) => {
       }
     case 'DELETE_ROUTINES':
       return { 
-        routines: state.routines.filter(w => w._id !== action.payload._id) 
+        routines: state.routines.filter(r => r._id !== action.payload._id) 
       }
     default:
       return state
