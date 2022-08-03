@@ -1,4 +1,5 @@
 import {useRoutinesContext} from '../hooks/useRoutinesContext'
+import { Link } from 'react-router-dom';
 
 const RoutineDetails = ({routine}) => {
 
@@ -21,13 +22,15 @@ const RoutineDetails = ({routine}) => {
 
 
   return (
+    <Link to={`/routines/${routine._id}`}>
+    
     <div className="workout-details">
     <h4>{routine.name}</h4>
     
     <span className="material-symbols-outlined" onClick={handleClick}>delete</span>
     
   </div>
-
+  </Link>
 
   )
 }
